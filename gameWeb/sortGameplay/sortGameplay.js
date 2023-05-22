@@ -1527,7 +1527,7 @@ $(".done").click(function () {
                         '$(".sort-func[value=popNode]").hide();' +
                         '$(".toggle-heap").hide();' +
                         '$(".heap-animation").hide();' +
-                        "closeSortGameplay($(this).parents().eq(1));" +
+                        "closeSortGameplay($('.sort-obj').parent());" +
                         "}, 300 * animationQueue.length);"
                 );
             }

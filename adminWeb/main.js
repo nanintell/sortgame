@@ -46,12 +46,12 @@ $(document).ready(function () {
     var theme = localStorage.getItem("theme");
     var soundOn = localStorage.getItem("sound");
     var bgmVolume = localStorage.getItem("volume");
-    if (theme == "light-theme" || theme == null) {
-        if(theme == null) {
-            theme = "light-theme"
-        }
+    if (theme == "light-theme") {
         $("body").removeClass("dark-mode");
-    } else if (theme == "dark-theme") {
+    } else {
+        if(theme == null) {
+            theme = "dark-theme"
+        }
         if ($("body").hasClass("dark-mode") == false) {
             $("body").addClass("dark-mode");
         }
@@ -230,6 +230,5 @@ $(".website-theme input").click(function () {
 
 $(".close-setting").click(function() {
     $(".setting-modal .card").show();
-    $(".setting-modal .card").CardWidget('collapse');
 })
 //////////////////////////////////////////////////////////////
