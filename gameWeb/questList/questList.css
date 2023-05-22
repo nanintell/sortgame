@@ -1,0 +1,117 @@
+.chapter-card, .stage-card {
+    background-color:transparent;
+    box-shadow:none;
+    transition: margin-bottom 0.4s;
+}
+
+.chapter-card:not(.collapsed-card), .stage-card:not(.collapsed-card) {
+    margin-bottom: 0;
+}
+
+.chapter-card > .card-body, .stage-card > .card-body {
+    padding-bottom: 0;
+}
+
+.dark-mode .chapter-card, .dark-mode .stage-card {
+    background-color: transparent !important;
+}
+
+.quest-background {
+    height: 90vh;
+}
+
+/*.master-quest {
+    height: 30rem;
+    overflow-y: auto;
+    margin-top: 2.5rem;
+}*/
+
+.category-option {
+    display: none;
+}
+
+.category-option button {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+/*
+.dark-mode .category-option button {
+    box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.15);
+}
+*/
+
+.team-edit-modal .modal-header * {
+    color: white !important;
+}
+
+.category-option button {
+    transition: background-image 0.15s ease-in-out;
+}
+
+.category-option h3 {
+    transition: color 0.15s ease-in-out;
+}
+
+.category-option button:hover > h3 {
+    mix-blend-mode: difference;
+}
+
+.category-option:nth-child(2) .card:first-child button:hover {
+    background-image: url("./levelHoverBg.gif");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.category-option:nth-child(2) .card:nth-child(2) button:hover {
+    background-image: url("./hardHoverBg.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+/* MOBILE PHONE AND TABLET PORTRAIT VIEW */
+@media only screen and (max-width: 820px) {
+    .category-option:first-child button:hover {
+        background-image: url("./mainHoverBgMB.gif");
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .category-option:first-child {
+        margin-top: 3rem;
+    }
+    .category-option > .card {
+        margin-bottom: 1rem;
+        height: 25vh;
+        min-width: 200px;
+    }
+    .master-quest {
+        height: 100%;
+        overflow-y: auto;
+        margin-top: 2.5rem;
+    }
+}
+
+/* PC AND LANDSCAPRE VIEW */
+@media only screen and (min-width: 821px) {
+    .category-option:first-child button:hover {
+        background-image: url("./mainHoverBgPC.gif");
+        background-size: cover;
+    }
+
+    .category-option:first-child > .card {
+        height: 100%;
+    }
+
+    .category-option:nth-child(2) > .card {
+        height: calc(50% - 0.5rem);
+    }
+
+    .quest-detail {
+        display: none;
+    }
+    .master-quest {
+        height: 35rem;
+        max-height: 80vh;
+        overflow-y: auto;
+        margin-top: 2.5rem;
+    }
+}

@@ -1,0 +1,133 @@
+<div>
+    <h3>Quick Sort</h3> </br>
+    
+    The algorithm uses <b>Divide and Conquer</b> Strategy and <b>its Big-O is O(n log(n)) for best and average cases</b>. 
+    For Worst Case, Big-O becomes O(n<sup>2</sup>)</b> </br>
+    Quick Sort's <b>Best Case</b> is<b> data which gives estimately equal size from partitioning</b> while <b>Worst Case</b> is <b>sorted data.</b></br>
+
+    This sorts uses <b>Partitioning</b> to sort values. <b>Partitioning</b> is a method where it selects a value called <b>Pivot</b> then
+    rearrange data so that <b>data on left side of Pivot is less or equal than it</b> and <b>data on right side of Pivot is more than it.</b></br>
+
+    So what? How do we use it to sort? After doing Partition, we find that <b>Pivot is already in a correct position of sorted data.</b> 
+    However, the left and right of Pivot is not sorted yet. Thus, Quick Sort can be done by <b>partitioning</b> where <b>Pivot is the first value.</b> </br>
+    We can see that it's like data is <b>split into 3 parts, group with values less than Pivot, Pivot and group with values more than Pivot.</b> 
+    After that, we <b>keep partitioning data on each group to split again and again until we get a group of a value.</b> 
+    We will get sorted data in asecending order (the least on left and most on right) </br></br>
+    Now, let's see an example (read from left to right) </br>
+    (Ps. In Battle Quest, <b>Partition Function can be used by selecting range then Pivot.</b> When you click "Done", the data will be partitioned. 
+    Also, for doing Quick Sort, you need to <b>sort the left side first then on to right side</b>)
+
+    <p class="mt-3"><b>First Step</b> Partitioning whole data where Pivot is the first value.</br></p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/quick/q1.gif" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q1r.jpg" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/quick/quick_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Second Step</b> Partitioning data on left side. We have to keep partitioning until the group is sorted before moving on.</p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/quick/q2.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q2r.JPG" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/quick/quick_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<div class="row mx-0 my-1">
+        <img src="./libraryContent/quick/q3.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q3r.JPG" class="col-sm-6" style="width:100%;">
+    </div>
+    <div class="row mx-0">
+        <img src="./libraryContent/quick/q4.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q4r.JPG" class="col-sm-6" style="width:100%;">
+    </div>-->
+
+    <p class="mt-3"><b>Last Step</b> Partitioning data on right side. Once done, we get sorted data in ascending order.</p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/quick/q5.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q5r.JPG" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/quick/quick_loop3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <small class="mt-3">
+        Ps. Partition used in this is Lomuto's partition which works by swapping Pivot with the last value </br>
+        then use i to count values which is less than or equal to Pivot where i starts at first position - 1 </br>
+        After that, loop checking each data, if a value is less than or equal to Pivot, increment i by 1 and swap i with checking value 
+        (so that value is on the left side of Pivot) </br>
+        Once finish looping, swap Pivot to position i + 1 </br>
+        Aside from Lomuto's, it also has Haore's which works by finding position of value on left side which is more than Pivot 
+        and value on right side which is less than Pivot. If found values and left position index is less than right position index, 
+        swap those values then keep checking until left and right side hit each other.
+    </small>
+
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/quick/quick.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/quick/q6.JPG" style="width:50%;">-->
+
+    Pseudo Code of Quick Sort is as below. </br>
+    <img src="./libraryContent/quick/quickCode1.PNG" style="width:100%;">
+    <img src="./libraryContent/quick/quickCode2.PNG" style="width:100%;">
+
+    <!--
+    ใช้หลักการ <b>Divide and Conquer</b> และมี <b>Big-O เป็น O(n log(n)) สำหรับ Best และ Average Case 
+    แต่สำหรับ Worst Case Big-O จะกลายเป็น O(n<sup>2</sup>)</b> </br> 
+    <b>Best Case</b> ของ Quick Sort คือค่า<b>ที่ให้ผล Partition ขนาดพอเท่าๆกัน</b> และ <b>Worst Case</b> ของ Quick Sort คือค่าเรียงจาก<b>มากไปน้อยหรือน้อยไปมาก</b> </br>
+
+    ใช้การ <b>Partition</b> ในการแก้ปัญหา โดย Partition คือการเลือกค่ามาตัวหนึ่งในกลุ่มข้อมูลเรียกว่า <b>Pivot</b> 
+    แล้วจัดค่าให้<b>พวกค่าด้านซ้าย Pivot ต้องมีค่าน้อยกว่าหรือเท่ากับมันทั้งหมด ส่วนพวกค่าด้านขวา Pivot ก็จะมากกว่ามันทั้งหมดเช่นกัน</b> </br>
+    
+    แล้วมันมาช่วยเรียงลำดับได้ไง? หลังเราทำ Partition แล้ว สิ่งที่ได้มาก็คือ <b>Pivot เรามันจะไปอยู่ตำแหน่งที่เรียงแล้ว</b> เหลือแต่กลุ่มค่าซ้ายขวาของมันที่ยังไม่เรียงที </br>
+    ดังนั้น Quick Sort จะทำเริ่มด้วยการ <b>Parition โดยใช้ Pivot เป็นตัวแรก</b>เพื่อหักกลุ่มข้อมูลเป็น 3 กลุ่มคือ<b>กลุ่มที่น้อยกว่าหรือเท่ากับ Pivot, กลุ่มที่มากกว่า Pivot และตัว Pivot เอง</b> </br>
+    หลังจากนั้นเรา<b>ทำ Partition ในกลุ่มที่น้อยกว่าหรือเท่ากับ Pivot และกลุ่มที่มากกว่า Pivot </b>แล้วหักครึ่งกลุ่มข้อมูลพวกนี้อีกครั้ง
+    พอเรา<b>หักไปเรื่อยๆจนเหลือแต่กลุ่มข้อมูล 1 ค่า</b> ก็จะได้กลุ่มข้อมูลที่เรียงลำดับจากน้อยไปมาก (ซ้ายน้อยที่สุด และขวามากที่สุด) </br></br>
+    เราลองมาดูตัวอย่างกันเถอะ (ดูจากซ้ายไปขวา) 
+    (ปล. ในการทำ Quick Sort <b>ใน Battle Quest</b> 
+    สามารถ<b>ใช้ฟังก์ชัน Partition</b> แล้ว<b>คลิกเลือกขอบเขต ตามมาด้วย Pivot</b> (คลิก Done หลังเลือกขอบเขตจะให้กลับมาเลือก Pivot) เพื่อทำ Partition ได้เลย 
+    แต่ต้อง<b>ทำส่วนซ้ายให้เสร็จก่อนแล้วค่อยมาทำส่วนขวา</b>)
+
+    <p class="mt-3"><b>ขั้นแรก</b> ทำการ Partition กลุ่มข้อมูลทั้งหมดโดยให้ค่าแรกเป็น Pivot </br></p>
+    <div class="row mx-0">
+        <img src="./libraryContent/quick/q1.gif" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q1r.jpg" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ขั้นที่สอง</b> ทำการ Partition กลุ่มข้อมูลส่วนซ้าย โดยเราต้อง Partition จนกว่ากลุ่มที่เรา Partition มาแล้วทั้งซ้ายขวามีแค่ค่าเดียว</p>
+    <div class="row mx-0">
+        <img src="./libraryContent/quick/q2.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q2r.JPG" class="col-sm-6" style="width:100%;">
+    </div>
+    <div class="row mx-0 my-1">
+        <img src="./libraryContent/quick/q3.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q3r.JPG" class="col-sm-6" style="width:100%;">
+    </div>
+    <div class="row mx-0">
+        <img src="./libraryContent/quick/q4.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q4r.JPG" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ขั้นสุดท้าย</b> ทำการ Partition กลุ่มข้อมูลส่วนขวา</p>
+    <div class="row mx-0">
+        <img src="./libraryContent/quick/q5.JPG" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/quick/q5r.JPG" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <small class="mt-3">
+        ปล. Partition ที่ใช้คือ Lomuto's partition สามารถทำได้โดยสลับ Pivot ให้เป็นตัวสุดท้ายของในกลุ่ม </br>
+        และเอา i มานับจำนวนค่าที่น้อยกว่าหรือเท่ากับ Pivot โดย i เริ่มที่ ตำแหน่งแรก - 1 </br>
+        ลูปเช็คค่าตั้งแต่ต้นจนถึงตัวก่อนสุดท้าย ถ้าตัวไหนน้อยกว่าหรือเท่ากับ Pivot ให้เพิ่มค่า i ไป 1 แล้วสลับค่าตำแหน่ง i และค่าที่เช็คอยู่ (เพื่อให้ค่าที่น้อยกว่า Pivot ไปอยู่ฝั่งซ้าย)</br>
+        เมื่อไล่เช็คจนครบแล้วสลับ Pivot กับค่าตำแหน่งที่ i + 1 </br>
+        นอกจาก Lomuto's แล้วยังมี Haore's ซึ่งจะใช้หลักการหาตำแหน่งค่าจากทั้ง 2 ฝั่งที่ค่าฝั่งซ้ายมากกว่า Pivot และค่าฝั่งขวาน้อยกว่า Pivot
+        ถ้าเจอโดยที่ค่าตำแหน่งฝั่งซ้ายน้อยกว่าค่าตำแหน่งฝั่งขวา ก็สลับค่าระหว่าง 2 ตำแหน่งนั้น แล้วตรวจใหม่เรื่อยๆจนค่าตำแหน่งฝั่งซ้ายขวาชนกัน </br>
+    </small>
+
+    <p class="mt-3">ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br></p>
+    <img src="./libraryContent/quick/q6.JPG" style="width:50%;">
+    -->
+</div>

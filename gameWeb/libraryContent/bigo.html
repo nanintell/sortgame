@@ -1,0 +1,34 @@
+<div>
+    <!--
+    <h3>Big-O Notation</h3></br>
+    Big-O บอก <b>ประสิทธิภาพของ Algorithm</b> และ <b>เวลาที่ใช้ในการรัน Algorithm</b> ดังนั้นยิ่ง Big-O น้อยเท่าไหร่ algorithm ยิ่งมีประสิทธิภาพเท่านั้น 
+    โดยมี Big-O 7 ชนิด เรียงลำดับจากดีไปมากดังนี้ </br> 
+
+    <ol style="height: 80%;">
+        <li>O(1) คือไม่ว่าจะใส่ข้อมูลอะไร จะ<b>ทำงานครั้งเดียวเท่านั้น</b></li>
+        <li>O(log n) คือทำเสร็จ <b>1 ครั้ง</b> จะทำ<b>น้อยลงครึ่งหนึ่งของเดิม</b> เช่น Binary Search</li>
+        <li>O(n) คือใส่<b>ข้อมูลเท่าไหร่</b> จะ<b>ทำงานจำนวนเท่านั้น</b> เช่น for loop n ครั้ง</li>
+        <li>O(n log n) คือทำงาน<b>เท่าจำนวนข้อมูล</b> แต่<b>ในแต่ละรอบ จะมีการทำงานแบบ O (log n)</b> อยู่ด้วย เช่น Merge Sort</li>
+        <li>O(n<sup>2</sup>) คือทำงาน<b>เท่าจำนวนข้อมูล</b> แต่<b>ในแต่ละรอบจะมีการทำงานเท่าจำนวนข้อมูล</b>ด้วย เช่น for loop n ครั้ง แล้วในแต่ละลูปก็ทำ for loop n ครั้งอีก</li>
+        <li>O(2<sup>n</sup>) คือทำเสร็จ <b>1 ครั้ง ต้องทำเพิ่ม 2 เท่า</b> เช่น fibonacci(n) + fibonacci(n-1) </li>
+        <li>O(n!) เช่นการหาค่า factorial แบบ recursive (n * factorial(n-1))</li>
+    </ol>
+    -->
+
+    <h3>Big-O Notation</h3></br>
+    Big-O tells <b>Algorithm's efficiency</b> and <b>time needed to run it.</b> 
+    We hate an algorithm that runs for a long time, right? 
+    Then, we will want Big-O to be as small as possible.
+    There are 7 kinds of Big-O as shown below. </br> 
+
+    <ol style="height: 80%;">
+        <li>O(1): No matter how much data you throw in, <b>the program will run only once.</b></li>
+        <li>O(log n): When the program <b>finishes running once</b>, its work will <b>become halved.</b> Ex. Binary Search </li>
+        <li>O(n): Throw in <b>N inputs</b>, the program will <b>run N times.</b> Ex. loop to print inputted values.</li>
+        <li>O(n log n): <b>Run as many times as input size.</b> However in <b>each loop,</b> the program <b>runs like O (log n).</b> Ex. Merge Sort</li>
+        <li>O(n<sup>2</sup>): <b>Run as many times as input size</b> but in <b>each loop,</b> the program also <b>runs as many times as input size.</b> Ex. run N loops and in each loop also loop N times.</li>
+        <li>O(2<sup>n</sup>): When the program <b>finishes running once,</b> its work will <b>become doubled.</b> Ex. fibonacci(n) + fibonacci(n-1).</li>
+        <li>O(n!): Ex. Recursively calculating factorial (n * factorial(n-1))</li>        
+    </ol>
+
+</div>

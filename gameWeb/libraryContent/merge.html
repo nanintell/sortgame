@@ -1,0 +1,101 @@
+<div>
+    <h3>Merge Sort</h3> </br>
+
+    The algorithm uses <b>Divide and Conquer</b> Strategy and <b>its Big-O is O(n log(n)) for all cases</b>. </br>
+    Merge Sort's <b>Best Case</b> for ascending order is <b>ascending sorted data</b> while <b>Worst Case</b> is <b>no duplicate data.</b></br>
+    
+    Merge Sort is done by <b>halving data repeatedly</b> until <b>it can no longer being cut</b> or only have a value left. Done then what? </br>
+    <b>Merge!</b> but it's not just putting groups together. We <b>check each value before put them in.</b> </br>
+    First, we <b>check first position of each group</b> first. The <b>less value is winner and put into merged group</b> first.
+    Then, <b>shift the won group to check the next position with the lost group.</b> Again, <b>less value is put into merged group.</b></br>
+    <b>Repeat this</b> until <b>all one of 2 groups' values are put into merged group</b> then, <b>throw in remaining values</b> into merged group. </br>
+    This merge method seems like sorting method but it may not give sorted data. </br>
+    However, if we divide data into groups then use this method to merge them back, we get sorted value. </br></br>
+    Now, let's see an example (read from left to right). </br>
+    (Ps. In <b>Battle Quest</b>, you can use <b>Divide function to halve data</b> into groups and <b>Merge function to merge</b> group. 
+    Also, you need to <b>sort the left group first then sort right group</b>)
+
+    <p class="mt-3"><b>First Step</b> Halve data until it can no longer do so.</p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/merge/m1.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/merge/merge_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3">
+        <b>Second Step</b> 
+        Merge Data </br>
+        When merging 2 and 4: <b>2 is less than 4</b> so put <b>2 in the group</b> then<b> 
+            the group 2 doesn't have member anymore</b> then put <b>all members in group 4 into the group</b> </br>
+        When merging 6 and 0: <b>0 is less than 6</b> so put <b>0 in the group</b> then<b>
+            the group 0 doesn't have member anymore</b> then put <b>all members in group 6 into the group</b> </br>
+        When merging 2,4 and 0,6: </br>
+        <b>0 is less than 2</b> so put <b>0 into the group</b> </br> 
+        <b>shift checking position in group 0,6</b> to 6 then compare 2 with 6 </br> 
+        <b>2 is less than 6</b> so put <b>2 into the group</b> </br> 
+        <b>shift checking position in group 2,4</b> to 4 then compare 4 with 6 </br> 
+        <b>4 is less than 6</b> so put <b>4 into the group</b> </br>
+        then<b> group 2,4 no longer has any members remained</b> so put <b>all remaining members in group 0,6 into the group</b>
+        Once done, we get the sorted data.
+    </p>
+    <div class="row mx-0 mb-3">
+        <!--<img src="./libraryContent/merge/m2.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/merge/merge_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/merge/merge.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/merge/m3.JPG" style="width:50%;">-->
+
+    Pseudo Code of Merge Sort is as below. </br>
+    <img src="./libraryContent/merge/mergeCode1.PNG" style="width:100%;">
+    <img src="./libraryContent/merge/mergeCode2.PNG" style="width:100%;">
+
+    <!--
+    ใช้หลักการ <b>Divide and Conquer</b> และมี <b>Big-O เป็น O(n log(n)) สำหรับทุกเคส</b> </br> 
+    <b>Best Case</b> ของ Merge Sort คือค่า<b>เรียงจากน้อยไปมาก</b> และ <b>Worst Case</b> ของ Merge Sort คือค่า<b>ไม่ซ้ำกัน</b> </br>
+    
+    Merge Sort ทำโดยการ<b>แบ่งครึ่งข้อมูลจนแบ่งไม่ได้</b> หรือเหลือค่าเดียวนั่นแหละ แบ่งแล้วทำอะไร? </br>
+    <b>จับรวม</b>ไง! แต่เราไม่ได้จับแบบต่อกันหน้าด้านๆนะ เราจะ<b>ไล่เช็คสมาชิกในแต่ละกลุ่มก่อนเราจับลง</b> </br>
+    เริ่มจาก<b>เปรียบเทียบตำแหน่งแรกของทั้ง 2 กลุ่ม</b>ก่อน <b>ตัวไหนน้อยกว่า เอาตัวนั้นเข้ากลุ่มไปก่อน</b> 
+    แล้ว<b>เลื่อนตำแหน่งเปรียบเทียบของกลุ่มที่ผ่านเป็นตำแหน่งถัดมา</b> แล้ว<b>เปรียบเทียบต่อไปเรื่อยๆ จนสมาชิกในกลุ่มใดกลุ่มหนึ่งเข้ากลุ่มครบ</b>
+    หลังจากนั้น<b>นำสมาชิกที่เหลือในกลุ่มแรกหรือกลุ่มที่สองเข้าไปในกลุ่ม</b> </br>
+    วิธีนี้ข้อมูลที่ได้<b>อาจจะไม่ได้เรียง</b>นะ แต่ถ้าเราทำแบ่งกลุ่มแล้วค่อยๆรวมกลุ่มกัน จะได้กลุ่มที่เรียงลำดับกัน </br></br>
+    เราลองมาดูตัวอย่างกันเถอะ (ดูจากซ้ายไปขวา) 
+    (ปล. ในการทำ Merge Sort <b>ใน Battle Quest</b> 
+    สามารถ<b>ใช้ฟังก์ชัน Divide เพื่อแบ่งครึ่งกลุ่มข้อมูลได้เลย และใช้ฟังก์ชัน Merge</b> 
+    แล้ว<b>คลิกกลุ่มที่อยู่ติดกัน</b> เพื่อรวมกลุ่มกันได้เลย และให้ไป<b>รวมกลุ่มซ้ายให้เสร็จก่อนแล้วค่อยไปรวมกลุ่มขวา</b>นะ)
+
+    <p class="mt-3"><b>ขั้นแรก</b> แบ่งครึ่งข้อมูลจนแบ่งไม่ได้</p>
+    <div class="row mx-0">
+        <img src="./libraryContent/merge/m1.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3">
+        <b>ขั้นที่สอง</b> 
+        ทำการรวมข้อมูล </br>
+        ตอนรวมกลุ่ม 2 และ 4: <b>2 น้อยกว่า 4</b> จึงนำ <b>2 เข้ากลุ่ม</b> แล้ว<b>กลุ่ม 2 ไม่มีสมาชิก</b>แล้วจึงนำ<b>สมาชิกในกลุ่ม 4 เข้าทั้งหมด</b> </br>
+        ตอนรวมกลุ่ม 6 และ 0: <b>0 น้อยกว่า 6</b> จึงนำ <b>0 เข้ากลุ่ม</b> แล้ว<b>กลุ่ม 0 ไม่มีสมาชิกแล้ว</b>จึงนำ<b>สมาชิกในกลุ่ม 6 เข้าทั้งหมด</b> </br>
+        ตอนรวมกลุ่ม 2,4 และ 0,6: </br>
+        <b>0 น้อยกว่า 2</b> จึงนำ <b>0 เข้ากลุ่ม</b> </br> 
+        <b>เลื่อนตำแหน่งเช็คในกลุ่ม 0,6</b> เป็น 6 แล้วเปรียบเทียบ 2 กับ 6 </br> 
+        <b>2 น้อยกว่า 6</b> จึงนำ <b>2 เข้ากลุ่ม</b> </br> 
+        <b>เลื่อนตำแหน่งเช็คในกลุ่ม 2,4</b> เป็น 4 แล้วเปรียบเทียบ 4 กับ 6 </br> 
+        <b>4 น้อยกว่า 6</b> จึงนำ <b>4 เข้ากลุ่ม</b> </br>
+        แล้ว<b>กลุ่ม 2,4 ไม่มีสมาชิกแล้ว</b>จึงนำ<b>สมาชิกที่เหลือในกลุ่ม 0,6 เข้าทั้งหมด</b>
+    </p>
+    <div class="row mx-0 mb-3">
+        <img src="./libraryContent/merge/m2.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br>
+    <img src="./libraryContent/merge/m3.JPG" style="width:50%;">
+    -->
+</div>

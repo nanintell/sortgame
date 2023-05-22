@@ -1,0 +1,124 @@
+/*.background-battle {
+    background-image: url("./battleBG.gif");
+    height: 100%;
+}*/
+
+.battle-bg {
+    height:100vh;
+    max-height:200vh;
+}
+
+.menu {
+    height: 10%;
+    background-color: #EAEDED;
+}
+
+.menu > button:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.dark-mode .menu {
+    background-color: transparent !important;
+}
+
+.mobs {
+    height: 30%;
+    background-image:url("../backgroundPics/volcano.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.mob-sprite {
+    width: 20%;
+}
+
+.mob-dmg {
+    background-color:red;
+    mix-blend-mode:hue;
+    width:25%;
+    height:30%;
+    position:absolute;
+    top:10%;
+    display:none;
+}
+
+.player-char {
+    height: 6%;
+}
+
+.char-card {
+    padding-left: 5%;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hp-bar {
+    height: 4%;
+}
+
+.command {
+    height: 50%;
+    /*overflow:auto;*/
+}
+
+.sort-calc {
+    height: 80%;
+    display: none;
+}
+
+.dmg-calc {
+    max-height: 90%;
+    overflow:auto;
+}
+
+.dmg-hit {
+    opacity: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
+}
+
+.table:not(.element-affinity) {
+    color: black !important;
+}
+
+a {
+    color: white;
+}
+
+/* MOBILE PHONE AND TABLET PORTRAIT VIEW */
+@media only screen and (max-width: 820px) {
+    .background-battle {
+        background-image: url("./battleBG.gif");
+        height: 100%;
+        display: none;
+    }
+
+    .player-char > div {
+        width: calc(100% / 3);
+    }
+
+    .hp-bar > div:first-child {
+        width: calc(100% / 12);
+    }
+
+    .hp-bar > div:last-child {
+        width: calc(100% * (11 / 12));
+    }
+}
+
+/* PC AND LANDSCAPRE VIEW */
+@media only screen and (min-width: 821px) {
+    .background-battle {
+        background-image: url("./battleBG.gif");
+        height: 100%;
+    }
+
+    .logmodal-button {
+        display: none;
+    }
+}

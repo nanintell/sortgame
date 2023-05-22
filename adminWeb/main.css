@@ -1,0 +1,138 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #bdc3c7;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #909497;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #626567;
+}
+
+body {
+    padding-right: 0 !important;
+}
+
+.loading-page {
+    background-color: #626567;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2500;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.loading-page .card {
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    position: absolute;
+}
+
+.loading-page .loading-status {
+    position: absolute;
+    top: 80vh;
+    left: 80vw;
+}
+
+/* Dark mode styling */
+/* Change autofill input color on dark mode */
+.dark-mode input:-webkit-autofill,
+.dark-mode input:-webkit-autofill:hover,
+.dark-mode input:-webkit-autofill:focus,
+.dark-mode input:-webkit-autofill:active {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #1b4f72 inset;
+}
+
+/*
+dark mode + button outline dark = button outline light.
+however, the app is often emptied and loaded new things in so we need to make this apply to all pages.
+if we use js, we will need to write same code to every page, 
+css is better but we need to paste down button outline light css code here (or edit directly in resources which we prefer not to right now.)
+*/
+.dark-mode .btn-outline-dark {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-dark:hover {
+    color: #1f2d3d;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-dark:focus,
+.dark-mode .btn-outline-dark.focus {
+    box-shadow: 0 0 0 0 rgba(248, 249, 250, 0.5);
+}
+
+.dark-mode .btn-outline-dark.disabled,
+.dark-mode .btn-outline-dark:disabled {
+    color: #f8f9fa;
+    background-color: transparent;
+}
+
+.dark-mode .btn-outline-dark:not(:disabled):not(.disabled):active,
+.dark-mode .btn-outline-dark:not(:disabled):not(.disabled).active,
+.dark-mode .show > .btn-outline-dark.dropdown-toggle {
+    color: #1f2d3d;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
+.dark-mode .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
+.dark-mode .show > .btn-outline-dark.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0 rgba(248, 249, 250, 0.5);
+}
+
+/*dark mode + bg-gradient-secondary = bg-gradient-dark*/
+.dark-mode .bg-gradient-secondary {
+    background: #343a3e linear-gradient(180deg, #52585d, #343a40) repeat-x !important;
+    color: #fff;
+}
+
+.dark-mode .setting-modal .form-control-plaintext {
+    color: #fff;
+}
+
+.setting-modal .modal-content {
+    background-color: #e5e7e9;
+}
+
+.dark-mode .setting-modal .modal-content {
+    background-color: #343a40 !important;
+}
+
+.dark-mode .loading-page {
+    background-color: black;
+}
+
+/* MOBILE PHONE AND TABLET PORTRAIT VIEW */
+@media only screen and (max-width: 820px) {
+    .loading-page .loading-status {
+        position: absolute;
+        top: 80vh;
+        left: 5vw;
+    }
+}
+
+/* PC AND LANDSCAPRE VIEW */
+@media only screen and (min-width: 821px) {
+    .loading-page .loading-status {
+        position: absolute;
+        top: 80vh;
+        left: 80vw;
+    }
+}

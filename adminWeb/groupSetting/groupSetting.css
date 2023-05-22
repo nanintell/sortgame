@@ -1,0 +1,122 @@
+.group-setting-bg {
+    height: 90vh;
+}
+
+.master-group-card {
+    border: 1px solid transparent !important;
+    border-radius: 0.25rem;
+    height: 100%;
+}
+
+.group-card {
+    height: 25%;
+    max-height: 170px;
+    overflow: auto;
+}
+
+.group-card > div {
+    height: 100%;
+    text-align: left;
+}
+
+.group-editor {
+    display: none;
+    max-height: 100%;
+}
+
+.group-detail-editor {
+    background-color: #d6d8db !important;
+    color: black !important;
+    padding: 0.5rem 0.75rem;
+}
+
+.group-member-editor {
+    max-height: 70%;
+}
+
+.group-editor table thead > tr:first-child {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.group-editor table th,
+td {
+    color: black;
+    white-space: nowrap;
+}
+
+.group-editor table th:first-child {
+    min-width: 9rem;
+}
+
+.group-editor table th:last-child {
+    width: 1%;
+}
+
+.dark-mode .group-editor table tbody tr:hover .form-control-plaintext {
+    color: white;
+}
+
+.form-control-plaintext {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.form-inline .form-control-plaintext {
+    width: auto;
+    vertical-align: middle;
+}
+
+.group-editor button:not(.add-member) > i {
+    width: 1rem;
+}
+
+.group-deadline[type="text"]:not(.form-control-plaintext) {
+    width: 10rem;
+    background-color: white;
+}
+
+.dark-mode .group-deadline[type="text"]:not(.form-control-plaintext) {
+    background-color: auto !important;
+}
+
+.group-deadline[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+    display: none;
+}
+
+.group-deadline[type="datetime-local"] {
+    max-width: 3rem;
+    border-left-color: transparent !important;
+}
+
+.dark-mode input.form-control-plaintext:-webkit-autofill,
+.dark-mode input.form-control-plaintext:-webkit-autofill:hover,
+.dark-mode input.form-control-plaintext:-webkit-autofill:focus,
+.dark-mode input.form-control-plaintext:-webkit-autofill:active {
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px #d6d8db inset;
+    border: 3px solid #d6d8db;
+}
+
+.import-group, .add-group {
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+.import-member {
+    width: 8.5rem;
+    margin-bottom: 1rem;
+}
+
+/* MOBILE PHONE AND TABLET PORTRAIT VIEW */
+@media only screen and (max-width: 820px) {
+    .group-detail-editor > div > div {
+        margin-bottom: 1rem;
+    }
+}
+
+/* PC AND LANDSCAPRE VIEW */
+@media only screen and (min-width: 821px) {
+    .group-title {
+        margin-right: 3rem;
+    }
+}

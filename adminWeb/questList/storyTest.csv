@@ -1,0 +1,18 @@
+general quest detail
+title, name
+quest description, desc
+required quest, quest name case insensitive
+quest type, story
+exp, 0
+background picture, beach
+-(space are skipable)-
+story quest detail
+line, left sprite, right sprite
+A:wtf happen, evan:embarrassed
+B:idk,,evan:happy
+C:we are in TeSt WoRlD idiot, evan:happy, evan:crying
+D:ic, polwigle, aqua
+> all left the room, god
+-(space are skipable)-
+picture, start, stop
+insertjava.png, 2, 3 

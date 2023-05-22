@@ -1,0 +1,74 @@
+<div>
+    <h3>Distribution Counting Sort</h3> </br>
+    This algorithm's <b>Big-O is O(n + k) for all cases where k is maximum value.</b>
+    <b>Best Case for sorting in ascending order</b> is <b>sorted data in ascending order</b> while 
+    <b>Worst Case</b> is <b>sorted data in descending order.</b> </br>
+
+    Distribution Counting Sort is done by <b>finding frequency of each value</b> then <b>calculating 
+    cumulative frequency.</b> These frequency can be <b>used to tell the correct position</b> of sorted data. 
+    Thus, this algorithm is <b>good for data with a lot of duplicate values.</b> </br>
+
+    Once done, <b>loop bringing each value into a position matched with cumulative frequency of that value.</b> 
+    Then, <b>decrement the frequency by 1</b> and move on. </br></br>
+
+    Now, let's see an example. (read from left to right) </br>
+    (Ps. In Battle Quest, you can use <b>Get Cumulative Count Function to get cumulative frequency</b> for all values. 
+    <b>Move Function is for moving value into another data.</b>)
+
+    <p class="mt-3"><b>First Step</b> Find Cumulative Frequency for all values. </br></p>
+    <div class="row mx-0">
+        <!--img src="./libraryContent/counting/c1.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/counting/c2.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/counting/counting_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Last Step</b> Use Cumulative Frequency to find correct position and move to it. Once done, we get sorted data in ascending order.</br></p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/counting/c3.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/counting/counting_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/counting/counting.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/counting/c4.JPG" style="width:50%;">-->
+
+    Pseudo Code of Distribution Counting Sort is as below. </br>
+    <img src="./libraryContent/counting/countingCode.PNG" style="width:100%;">
+
+    <!--
+    มี <b>Big-O เป็น O(n + k) สำหรับทุกเคส โดย k คือค่าสูงสุด</b>
+    <b>Best Case</b> ของ Distribution Counting Sort คือค่าเรียงลำดับ<b>จากน้อยไปมาก</b> และ 
+    <b>Worst Case</b> ของ Distribution Counting Sort คือค่าเรียงลำดับ<b>จากมากไปน้อย</b> </br>
+
+    Distribution Counting Sort เรียงลำดับจากน้อยไปมาก เริ่มจากการหาความถี่สะสมของแต่ละค่า 
+    แล้วความถี่สะสมนั้นจะบอกตำแหน่งที่ถูกต้องได้ ดังนั้น Sorting Algorithm นี้จะดีกับกลุ่มข้อมูลที่มีค่าซ้ำเยอะๆ </br>
+
+    เมื่อคำนวณเสร็จแล้ว<b>นำค่านั้นลงในตำแหน่งที่ตรงกับค่าความถี่สะสมของค่านั้น</b> เสร็จแล้ว<b>ลบความถี่สะสมไป 1</b> หลังจากนั้นเราก็ไล่ใส่ค่าไปเรื่อยๆจนครบ </br>
+
+    เราลองมาดูตัวอย่างกันเถอะ (ดูจากซ้ายไปขวา) 
+    (ปล. ในการทำ Distribution Counting Sort <b>ใน Battle Quest</b> 
+    สามารถ<b>ใช้ฟังก์ชัน Get Cumulative Count </b>เพื่อ<b>หาความถี่สะสมได้</b> และ<b>ฟังก์ชัน Move</b> เพื่อเอา <b>ค่าลงในกลุ่มข้อมูลใหม่</b> ได้)
+
+    <p class="mt-3"><b>ขั้นแรก</b> หาความถี่สะสมของค่าทั้งหมด </br></p>
+    <div class="row mx-0">
+        <img src="./libraryContent/counting/c1.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/counting/c2.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ขั้นสุดท้าย</b> นำความถี่สะสมที่ได้มาใช้ดูตำแหน่งที่จะใส่ในกลุ่มข้อมูลใหม่ </br></p>
+    <div class="row mx-0">
+        <img src="./libraryContent/counting/c3.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3">ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br></p>
+    <img src="./libraryContent/counting/c4.JPG" style="width:50%;">
+    -->
+</div>

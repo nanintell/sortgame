@@ -1,0 +1,114 @@
+<div>
+    <h3>Insertion Sort</h3> </br>
+    The algorithm uses <b>Decrease and Conquer</b> Strategy and its <b>Big-O is O(n<sup>2</sup>) for average and worse case 
+    but in best case, it becomes O(n).</b> Just like Bubble Sort. </br>
+    <b>Best Case</b> of Insertion Sort in ascending order is <b>ascending sorted data</b> while <b>Worst Case</b> is <b>descending sorted data.</b> </br>
+    Insertion Sort (ascending) is like <b>separating data</b> into <b>sorted data</b> and <b>unsorted data</b> </br>
+    First, we let <b>the sorted data is the leftmost data</b> while <b>the rest is unsorted data.</b>
+    After that, <b>We compare the value next to sorted data.</b> If that <b>value is less</b>, meaning that it's not sorted, we <b>swap to left.</b> </br>
+    Now, we have 2 values in sorted data! Then, let's continue. <b>If it's less, we swap.</b> </br>
+    But! <b>If that value is still less than the value of the left?</b></br> 
+    We simply <b>compare the value with the left one</b> then <b>if value is less than the left, swap them.</b> 
+    <b>Repeat this until the left value is less than right one.</b> </br>
+    Then, we <b>keep sorting in unsorted data until no unsorted data left.</b> </br>
+    Finally, we get ascending sorted data. (left is lowest and right is highest) </br></br>
+    Now, let's see an example, shall we? (Read from left to right) </br>
+    (Ps. Like Bubble Sort, <b>In Battle Quest, you will need to check from left to right but check from right to left when arranging values in sorted data</b>) </br>
+    
+    <p class="mt-3"><b>First Loop</b> Let sorted data is the leftmost value then check the value next to it <del>(drag the guy next to to the group)</del></p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/insertion/i1.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/insertion/i2.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%" class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/insertion/insertion_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3">
+        <b>Second Loop</b> Check the next value <del>(drag another guy to the group)</del> </br>
+        This time <b>5 is less than 7</b> so<b>swap 5 and 7</b> </br>
+        Check if 5 is less than 4 </br>
+        Oh my! <b>5 isn't less than 4.</b> Thus, <b>5 is in the right place.</b>
+    </p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/insertion/i3.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%" class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/insertion/insertion_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3">
+        <b>Last Loop</b> Check the last value in unsorted data <del>(drag the last guy into the group)</del> </br>
+        This time, <b>2 is less than 7</b> so<b>swap 2 and 7</b> </br>
+        check if 2 is less than 5 </br>
+        <b>2 is less than 5</b> so <b>swap 2 and 5</b> </br>
+        check if 2 is less than 4 </br>
+        <b>2 is less than 4</b> so <b>swap 2 and 4</b> </br>
+        Once done, we get the ascending sorted data
+    </p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/insertion/i4.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%" class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/insertion/insertion_loop3.mp4" type="video/mp4">
+        </video>
+    </div>
+    <small class="mb-3">Ps. In the pictures, they use shifting values to right method like opening a hole to put 2 in the right place 
+        which is usable but we can also keep swapping! (Battle Quest requires you to swap though)</small>
+    </br>
+
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/insertion/insertion.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/insertion/i5.JPG" style="width:50%;">-->
+
+    Pseudo Code of Insertion Sort is as below. </br>
+    <img src="./libraryContent/insertion/insertionCode.PNG" style="width:100%;">
+
+    
+    <!--
+    ใช้หลักการ <b>Decrease and Conquer</b> และมี <b>Big-O เป็น O(n<sup>2</sup>) สำหรับทุกเคส</b> เหมือน Bubble Sort </br>
+    <b>Best Case</b> ของ Insertion Sort คือค่า<b>เรียงจากน้อยไปมาก</b> และ <b>Worst Case</b> ของ Insertion Sort คือค่าเรียงจาก<b>มากไปน้อย</b> </br>
+    Insertion Sort ทำเหมือนแบ่งข้อมูลเป็น<b>ส่วนที่เรียงแล้ว</b> และ<b>ส่วนที่ยังไม่เรียงที</b> </br>
+    โดยตอนแรก<b>ส่วนที่เรียงแล้วมีแค่ตัวเดียวคือตัวซ้ายสุด</b> และ<b>ที่เหลือคือส่วนที่ยังไม่เรียงที</b> </br>
+    หลังจากนั้นเราก็<b>ตรวจสอบตัวถัดจากส่วนที่เรียงแล้ว</b> ถ้าตัวนั้น<b>น้อยกว่า</b> แปลว่ามัน<b>ไม่เรียงกันอยู่</b> เราก็<b>สลับให้มันไปอยู่ซ้าย</b>แทน
+    โอเค เรามีส่วนที่เรียงแล้ว 2 ตัวล่ะ! งั้นไปเช็คตรวจถัดมากัน ถ้าน้อยกว่าเราก็สลับกลับไปอีกเหมือนเดิม </br>
+    แต่! <b>ถ้ามันยังน้อยกว่าค่าซ้ายอีกล่ะ?</b>... ก็<b>สลับต่อ จนกว่าตัวซ้ายของมันน้อยกว่ามัน</b>นั่นเอง </br>
+    แล้วเราก็ค่อยๆจัดค่าในส่วนที่ไม่เรียงไปเรื่อยๆจนหมด ก็จะได้กลุ่มข้อมูลที่เรียงลำดับจากน้อยไปมาก (ซ้ายน้อยที่สุด และขวามากที่สุด) </br></br>
+    เราลองมาดูตัวอย่างกันเถอะ (ดูจากซ้ายไปขวา) (ปล. เหมือนกับ Bubble Sort <b>ใน Battle Quest ต้องไล่ตรวจสอบจากซ้ายไปขวานะ ในช่วงจัดค่าเข้าไปให้ทำจากขวาไปซ้าย</b>)
+
+    <p class="mt-3"><b>ลูปแรก</b> ตั้งให้ส่วนที่เรียงแล้วคือตัวซ้ายสุด แล้วตรวจตัวที่ 2 <del>(ไปตีหัวมันเข้าแก๊งเรียงแล้ว)</del></p>
+    <div class="row mx-0">
+        <img src="./libraryContent/insertion/i1.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/insertion/i2.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3">
+        <b>ลูปที่สอง</b> ตรวจตัวถัดจากส่วนที่เรียงแล้วซึ่งก็คือตัวที่ 3 <del>(ไปตีหัวเข้าแก๊งอีกหนึ่ง)</del> </br>
+        รอบนี้ <b>5 น้อยกว่า 7</b> จึง<b>สลับ 5 ไปอยู่ก่อน 7</b> </br>
+        เช็คว่า 5 น้อยกว่า 4 ไหม </br>
+        ว้าย! <b>5 ไม่น้อยกว่า 4</b> ดังนั้น <b>5 อยู่ถูกที่แล้ว</b>
+    </p>
+    <div class="row mx-0">
+        <img src="./libraryContent/insertion/i3.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3">
+        <b>ลูปสุดท้าย</b> ตรวจตัวสุดท้ายในส่วนที่ยังไม่เรียงที <del>(ลากคนสุดท้ายเข้าแก๊ง)</del> </br>
+        รอบนี้ <b>2 น้อยกว่า 7</b> จึง<b>สลับ 2 ไปอยู่ก่อน 7</b> </br>
+        เช็คว่า 2 น้อยกว่า 5 ไหม </br>
+        <b>2 น้อยกว่า 5</b> จึง <b>สลับ 2 ไปอยู่ก่อน 5</b> </br>
+        เช็คว่า 2 น้อยกว่า 4 ไหม </br>
+        <b>2 น้อยกว่า 4</b> จึง <b>สลับ 2 ไปอยู่ก่อน 4</b> </br>
+    </p>
+    <div class="row mx-0">
+        <img src="./libraryContent/insertion/i4.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+    <small class="mb-3">ปล. ในภาพใช้วิธีการเลื่อนค่าไปทางขวาไป (เปิดรูให้อัดค่าเข้าไปได้) แล้วเอา 2 อัดที่ที่ถูกของมัน ซึ่งใช้ได้เหมือนกัน หรือจะสลับไปก็ได้ (ใน Battle Quest ทำสลับได้อย่างเดียวนะ!)</small>
+    </br>
+    ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br>
+    <img src="./libraryContent/insertion/i5.JPG" style="width:50%;">
+    -->
+</div>

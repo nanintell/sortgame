@@ -1,0 +1,85 @@
+<div>
+    <h3>Bubble Sort</h3> </br>
+    The algorithm uses <b>Decrease and Conquer</b> Strategy and its <b>Big-O is O(n<sup>2</sup>) for average and worse case 
+    but in best case, it becomes O(n).</b> </br>
+    <b>Best Case</b> of Bubble Sort in ascending order is <b>ascendingly sorted data</b> while <b>Worst Case</b> is <b>descendingly sorted data</b> </br>
+    Sorting in ascending order (lowesr on left and highest on right), using Bubble Sort is done by <b>comparing 2 values next to each other.</b> </br>
+    If <b>left value is higher than right value, swap them. </b>
+    Once all pairs are compared and/or swapped, <b>the rightmost value is the highest one.</b> </br>
+    What if we repeat this method once more but <b>stop at the value before the rightmost?</b> </br>
+    ...Right! <b>The value before the rightmost is the second highest value!</b> </br>
+    Thus, if we keep repeating and decreasing stopping point, we get the sorted data.</br></br>
+    Now, let's see an example. (From left to right) (Ps. <b>In Battle Quest, you will need to check from left to right.</b>) </br>
+
+    <p class="mt-3"><b>First Loop</b> As seen in the pictures, the highest value which is 5 is being repeatedly swapped to rightmost position.</p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/bubble/b1.GIF" class="col-sm-4" style="width:100%;">
+        <img src="./libraryContent/bubble/b2.GIF" class="col-sm-4" style="width:100%;">
+        <img src="./libraryContent/bubble/b3.GIF" class="col-sm-4" style="width:100%;">-->
+        <video width="100%" class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/bubble/bubble_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Second Loop</b> The time, we only compare to the value before rightmost.</p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/bubble/b4.GIF" class="col-sm-4" style="width:100%;">
+        <img src="./libraryContent/bubble/b5.GIF" class="col-sm-4" style="width:100%;">-->
+        <video width="100%" class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/bubble/bubble_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Last Loop</b> On the last loop, we compare only 1 pair. Once done, we get the sorted data.</p>
+    <div class="row mx-0 mb-3">
+        <!--<img src="./libraryContent/bubble/b6.GIF" class="col-sm-4" style="width:100%;">-->
+        <video width="100%" class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/bubble/bubble_loop3.mp4" type="video/mp4">
+        </video>
+    </div>
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/bubble/bubble.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/bubble/b7.JPG" style="width:33%;">-->
+
+    Pseudo Code of Bubble Sort is as below. </br>
+    <img src="./libraryContent/bubble/bubbleCode.PNG" style="width:100%;">
+
+
+    <!--
+    ใช้หลักการ <b>Decrease and Conquer</b> และมี <b>Big-O เป็น O(n<sup>2</sup>) สำหรับทุกเคส</b> </br>
+    <b>Best Case</b> ของ Bubble Sort จากน้อยไปมากคือค่า<b>เรียงจากน้อยไปมาก</b> และ <b>Worst Case</b> ของ Bubble Sort คือค่าเรียงจาก<b>มากไปน้อย</b> </br>
+    เรียงจากน้อยไปมาก (ซ้ายน้อยที่สุด และขวามากที่สุด) โดยการนำ<b>ค่าติดกันมาเปรียบเทียบกัน</b> ถ้า<b>ค่าซ้ายมากกว่าค่าขวา</b> ก็<b>สลับค่ากัน</b> 
+    แล้วเมื่อจับคู่เปรียบเทียบและ/หรือสลับกับ<b>ครบทุกคู่</b>แล้ว <b>ค่าขวาสุดที่ได้คือค่าที่มากที่สุด</b> </br>
+    จะเกิดอะไรขึ้นถ้าเราทำอีกครั้ง แต่<b>ถึงแค่ตัวก่อนขวาสุด?</b> </br>
+    ... ใช่! <b>ตัวก่อนขวาสุดจะเป็นค่าที่มากสุดอันดับ 2</b> </br>
+    ดังนั้นเราก็ทำใหม่เรื่อยๆ และคอยลดขอบเขตลงเรื่อยๆ ก็จะเรียงลำดับกันในที่สุด </br></br>
+    เราลองดูตัวอย่างการทำกันเถอะ (ดูจากซ้ายไปขวา) (ปล.<b>ใน Battle Quest ต้องทำจากซ้ายไปขวานะ</b>)
+
+    <p class="mt-3"><b>ลูปแรก</b> จะเห็นว่า 5 ซึ่งเป็นค่ามากที่สุดถูกสลับรัวๆจนไปขวาสุด</p>
+    <div class="row mx-0">
+        <img src="./libraryContent/bubble/b1.GIF" class="col-sm-4" style="width:100%;">
+        <img src="./libraryContent/bubble/b2.GIF" class="col-sm-4" style="width:100%;">
+        <img src="./libraryContent/bubble/b3.GIF" class="col-sm-4" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ลูปที่ 2</b> จะเห็นว่ารอบนี้เปรียบเทียบถึงเพียงแค่ตัวก่อนสุดท้าย</p>
+    <div class="row mx-0">
+        <img src="./libraryContent/bubble/b4.GIF" class="col-sm-4" style="width:100%;">
+        <img src="./libraryContent/bubble/b5.GIF" class="col-sm-4" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ลูปสุดท้าย</b> ลูปสุดท้ายจะเหลือคู่ให้เปรียบเทียบเพียงคู่เดียวเท่านั้น</p>
+    <div class="row mx-0 mb-3">
+        <img src="./libraryContent/bubble/b6.GIF" class="col-sm-4" style="width:100%;">
+        
+    </div>
+    ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br>
+    <img src="./libraryContent/bubble/b7.JPG" style="width:33%;">
+    -->
+</div>
+
+

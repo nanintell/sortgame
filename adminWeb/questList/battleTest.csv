@@ -1,0 +1,27 @@
+general quest detail
+title, name1
+quest description, desc
+required quest, Quest 1-2: Strange creature and body
+quest type, battle
+exp, 0
+background picture, beach
+-(space are skipable)-
+battle quest detail
+description, desc
+water, wk	
+fire, nu
+earth, st
+wind, --
+dark, ??
+light, dr
+ice, --
+-(space are skipable)-
+no, name, sprite, attack, hp, water, fire, earth, wind, dark, light, ice
+1, egul, polwigle, 150, 9000, rf, rf, rf, --, rf, rf, nu
+2, reflect shadow
+-(space are skipable)-
+monster 1, number of monter 1, monster 2,  number of monter 2
+1, 4
+1,3
+1,2
+1,1,2,1

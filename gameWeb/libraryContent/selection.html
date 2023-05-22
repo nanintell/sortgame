@@ -1,0 +1,95 @@
+<div>
+    <h3>Selection Sort</h3> </br>
+    The algorithm uses <b>Decrease and Conquer</b> Strategy and <b>its Big-O is O(n<sup>2</sup>) for all cases</b> </br>
+    Selection Sort's <b>Best Case</b> in ascending order is <b>ascending sorted data</b> while <b>Worst Case</b> is <b>descending sorted data.</b></br>
+    Selection Sort in ascending order (left is the lowest and right is the highest) is done 
+    by "selecting" <b>the lowest value and swap to the leftmost position.</b> </br> 
+    Yeah Yeah. The least value is on the leftmost. Now what? </br>
+    Why not find the second lowest value and place it in second position? </br>
+    We can do it by <b>finding the lowest value from second position to the last position</b> 
+    since <b>the lowest is already in the first position.</b>
+    Then Voila! <b>First 2 values are sorted!</b> Now what? </br>
+    What will happen if we keep <b>finding the next lowest and put them in the next position and keep at it until we find all of values</b>? </br>
+    We got sorted values! </br></br>
+    Now let's see an example! (read from left to right) 
+    (Ps. In <b>Battle Quest</b>, You can <b>use Find Min Function</b> to <b>get the lowest object in selected range.</b>) </br>
+
+    <p class="mt-3"><b>First Loop</b> Find the lowest value in the group which is 2 then swap it with the first position.</p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/selection/s1.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/selection/selection_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Second Loop</b> Find the lowest value from second to last position which is 4 then swap 4 with the second position. </p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/selection/s2.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/selection/selection_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Third Loop</b> Find the lowest value from third to last position which is 5 but 5 is already at third position so no need to swap. </p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/selection/s3.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/selection/selection_loop3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Last Loop</b> Since all values are in right places, we can skip checking the last value. Once done, we get ascending sorted data.</p>
+    <div class="row mx-0 mb-3">
+        <!--<img src="./libraryContent/selection/s4.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/selection/selection_loop4.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/selection/selection.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/selection/s5.JPG" style="width:50%;">-->
+
+    Pseudo Code of Selection Sort is as below. </br>
+    <img src="./libraryContent/selection/selectionCode.PNG" style="width:100%;">
+
+    <!--
+    ใช้หลักการ <b>Decrease and Conquer</b> และมี <b>Big-O เป็น O(n<sup>2</sup>) สำหรับทุกเคส</b> เหมือน Bubble Sort และ Insertion Sort </br>
+    <b>Best Case</b> ของ Selection Sort คือค่า<b>เรียงจากน้อยไปมาก</b> และ <b>Worst Case</b> ของ Selection Sort คือค่าเรียงจาก<b>มากไปน้อย</b> </br>
+    เรียงลำดับจากน้อยไปมาก (ซ้ายน้อยที่สุด และขวามากที่สุด) โดย เริ่มจาก "Select" <b>ค่าที่น้อยที่สุดแล้วสลับไปซ้ายสุด</b> </br>
+    โอเค ค่าน้อยที่สุดอยู่ซ้ายแล้ว แล้วเราจะจัดการส่วนที่เหลือยังไง? </br>
+    เราลองหาค่าน้อยที่สุดอันดับที่ 2 มาไว้เป็นตัวที่ 2 ก่อนแล้วกัน </br>
+    ตัวน้อยสุดอันดับที่ 1 อยู่ซ้ายสุดแล้ว ดังนั้นถ้าเราลอง<b>หาค่าน้อยที่สุดตั้งแต่ตัวที่ 2 เป็นต้นมา</b>ล่ะ? เราก็จะได้<b>ค่าน้อยสุดอันดับ 2</b> นั่นเอง หลังจากนั้นเราก็<b>สลับมันมาไว้ตำแหน่งที่ 2</b> ได้ </br>
+    แล้วเราจะเจอว่า... 2 ตัวแรกที่ได้มันเรียงกันแล้ว! </br>
+    คราวนี้จะเกิดอะไรขึ้น... ถ้าเราทำต่อโดย<b>หาตัวน้อยสุดลำดับถัดมา แล้วสลับไปอยู่ตัวถัดมา</b> เรื่อยๆจนครบ เราก็จะได้กลุ่มข้อมูลที่เรียงลำดับกัน </br></br>
+    เราลองมาดูตัวอย่างกันเถอะ (ดูจากซ้ายไปขวา) 
+    (ปล. ในการทำ Selection Sort <b>ใน Battle Quest</b> สามารถ<b>ใช้ฟังก์ชัน Find Min</b> แล้ว<b>คลิกเลือกขอบเขต</b>ที่ต้องการจะหาค่าน้อยที่สุดได้เลย)
+
+    <p class="mt-3"><b>ลูปแรก</b> หาค่าต่ำที่สุดในทั้งกลุ่ม ซึ่งคือ 2 แล้วสลับ 2 กับตัวแรกเพื่อให้ไปอยู่ซ้ายสุด</p>
+    <div class="row mx-0">
+        <img src="./libraryContent/selection/s1.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ลูปที่สอง</b> หาค่าต่ำที่สุดตั้งแต่ตัวที่ 2 ถึงตัวสุดท้าย ซึ่งก็คือ 4 แล้วสลับ 4 กับตัวที่ 2 </p>
+    <div class="row mx-0">
+        <img src="./libraryContent/selection/s2.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ลูปที่สาม</b> หาค่าต่ำที่สุดตั้งแต่ตัวที่ 3 ถึงตัวสุดท้าย ซึ่งก็คือ 5 แต่ 5 เป็นตัวที่ 3 อยู่แล้ว ก็ไม่ต้องสลับ </p>
+    <div class="row mx-0">
+        <img src="./libraryContent/selection/s3.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ลูปสุดท้าย</b> เหลือเพียงตัวเดียวที่ยังไม่ได้ตรวจสอบ แต่ในเมื่อทุกค่าอยู่ตำแหน่งที่ถูกต้องหมดแล้ว ก็สามารถข้ามได้เลย </p>
+    <div class="row mx-0 mb-3">
+        <img src="./libraryContent/selection/s4.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br>
+    <img src="./libraryContent/selection/s5.JPG" style="width:50%;">
+    -->
+</div>

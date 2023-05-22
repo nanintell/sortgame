@@ -1,0 +1,36 @@
+general quest detail
+title, name
+quest description, desc
+required quest, name1
+quest type, quiz
+exp,0
+background picture, beach
+-(space are skipable)-
+quiz quest detail
+no, question, test sort, left sprite,right sprite, picture
+1, who are devs?, counting,,silver,
+2, is she here?, bubble,,,
+3, ty for playing, insertion,,,
+-(space are skipable)-
+no, question no, dropdown label
+1,1, first dev
+2,1, second dev
+3,1, third dev
+4,2, choice
+5,3, b4 you go mind voting the game? pleaseee <3
+-(space are skipable)-
+dropdown no, choice, correct
+1, nan, true
+1, benz, false
+1, kao pun, false
+2, nan, false
+2, benz, true
+2, kao pun, false
+3, nan, false
+3, benz, false
+3, kao pun, true
+4, idk, true
+4, who is she???, false
+5, NO., false
+5, gladly!, true
+-(space are skipable)-

@@ -1,0 +1,116 @@
+<div>
+    <h3>Heap Sort</h3> </br>
+    This algorithm uses <b>Decrease and Conquer</b> and <b>its Big-O is O(n log(n)) for all cases</b>
+    <b>Best Case</b> of Heap Sort is<b> data with duplicates as many as possible</b> while <b>Worst Case</b> is <b>data without duplicates</b> </br>
+
+    <b>Max-Heap</b> is a Binary Tree of which Parent node (upper node) must have more value than Child nodes 
+    I wonder how we will be able to sort with this... Hint: <b>Root Node</b> </br>
+    Yes! <b>Root Node has highest value!</b> </br>
+    However, when we sort values, it's in flat array. How do we know which node is which position? </br>
+    <b>Root Node is in the first position.</b> If we let position of a <b>parent node be j</b> </br>
+    Then <b>Child Nodes</b> of Parent Node are <b>2j for left node and 2j + 1 for right node.</b></br>
+    Now we know that <b>Root Node which has highest value is on the first position.</b>
+    Where sorting in ascending order, the highest value is placed on ... last position. </br>
+    Thus, <b>we swap it to the last position.</b> Then what next? Judging from the pace, it must be something about second highest value, no?
+    We can <b>find second highest value by heapify the tree once more</b> but <b>leave out a value on last position.</b> </br>
+    Now root node is the second highest value then we <b>swap to a position before last position.</b> 
+    If we keep repeating this, we will get a sorted value in ascending order. </br></br>
+    Now, let's see an example. (read from left to right) </br>
+    (Ps. In Battle Quest, Heap Tree can be created by using Heap Function and selecting range of data. 
+    Using Heap Function makes existed tree into heap. Pop Node Function removes last node in the tree.)
+
+    <p class="mt-3"><b>First Step</b> Create Max-Heap then swap Root Node and Last Node and pop the node out of Heap.</br></p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/heap/h1.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h2.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/heap/heap_loop1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p class="mt-3"><b>Last Step</b> Re-heapify then swap Root Node and Last Node and pop the node out of Heap. 
+        Repeat this until the tree has only a node left. Once done, we get sorted data in ascending order. </br></p>
+    <div class="row mx-0">
+        <!--<img src="./libraryContent/heap/h3.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h4.GIF" class="col-sm-6" style="width:100%;">-->
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/heap/heap_loop2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!--<div class="row mt-3 mx-0">
+        <img src="./libraryContent/heap/h5.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h6.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <div class="row mt-3 mx-0">
+        <img src="./libraryContent/heap/h7.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h8.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <div class="row mt-3 mx-0">
+        <img src="./libraryContent/heap/h9.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h10.GIF" class="col-sm-6" style="width:100%;">
+    </div>-->
+    
+    Here is a video of the whole process.</br>
+    <div class="row mx-0 mb-3">
+        <video width="100%"class="col-sm-12" autoplay controls>
+            <source src="./libraryContent/heap/heap.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!--<img src="./libraryContent/heap/h11.JPG" style="width:50%;">-->
+
+    Pseudo Code of Heap Sort is as below. </br>
+    <img src="./libraryContent/heap/heapCode1.PNG" style="width:100%;">
+    <img src="./libraryContent/heap/heapCode2.PNG" style="width:100%;">
+
+    <!--
+    ใช้หลักการ <b>Decrease and Conquer</b> และมี <b>Big-O เป็น O(n log(n)) สำหรับทุกเคส</b>
+    <b>Best Case</b> ของ Heap Sort คือค่า<b>เหมือนกันมากที่สุด</b> และ <b>Worst Case</b> ของ Heap Sort คือค่า<b>ไม่ซ้ำ</b> </br>
+
+    <b>Max-Heap</b> คือ Binary Tree ที่กำหนดให้ Parent node (node ส่วนบน) ต้องมากกว่า Child nodes แล้วมันเอาช่วยได้อย่างไร คำใบ้คือ <b>Root Node</b> </br>
+    ใช่! <b>Root Node จะต้องเป็นค่าสูงที่สุดนั่นเอง</b> </br>
+    แล้วเวลาเราเรียงข้อมูล มันเป็น Array แบนๆ แล้วเราจะรู้ได้ไงว่า node ไหนคือตำแหน่งไหน </br>
+    เราจะไล่จาก <b>Root Node เป็นตำแหน่งแรก</b> </br>
+    แล้วกำหนดให้ <b>Node คือ j</b> แล้ว <b>Child Node ด้านซ้ายจะเป็น 2j และ Child Node ด้านขวาจะเป็น 2j + 1</b> </br>
+    ดังนั้น<b>ค่ามากที่สุดคืออยู่ตำแหน่งแรกนั่นเอง</b> แล้วค่ามากสุดอยู่ตรงไหนเมื่อเรียงจากน้อยไปมาก? ขวาสุดไง! <b>เราก็สลับไปขวาเลย</b> </br>
+    แล้วไงต่อ? เราก็หาตัวมากที่สุดอันดับ 2 แต่เราต้องหายังไง? <b>เราเอาตัวมากที่สุดที่โดนสลับไปขวาออกจาก Heap แล้วจัด Node ที่อยู่ใน Heap ใหม่</b> </br>
+    คราวนี้ Root Node ก็จะกลายเป็นค่ามากสุดอันดับสองนั่นเอง เราก็สลับไปตำแหน่งก่อนขวาสุดซึ่งเป็นตำแหน่งสุดท้ายใน Heap ด้วย  </br>
+    ดังนั้นถ้าเราเอา Node สุดท้ายออกอีก แล้วทำจัด Heap ใหม่ และสลับอีกครั้ง ไปเรื่อยๆจนเหลือแค่ Node เดียวใน Heap ก็จะได้ข้อมูลที่เรียงกัน </br>
+
+    เราลองมาดูตัวอย่างกันเถอะ (ดูจากซ้ายไปขวา) 
+    (ปล. ในการทำ Heap Sort <b>ใน Battle Quest</b> 
+    สามารถ<b>ใช้ฟังก์ชัน Heap และเลือกขอบเขต</b>เพื่อ<b>สร้าง Heap และปรับ Heap ใหม่ได้</b> และ<b>ฟังก์ชัน Pop Node</b> เพื่อเอา <b>Node ขวาสุดออกจาก Heap</b> ได้)
+
+    <p class="mt-3"><b>ขั้นแรก</b> สร้าง Max-Heap สลับ Root Node กับ Node สุดท้าย แล้วนำ Node ออกจาก Heap </br></p>
+    <div class="row mx-0">
+        <img src="./libraryContent/heap/h1.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h2.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <p class="mt-3"><b>ขั้นที่สุดท้าย</b> จัด Heap ใหม่ แล้วสลับ Root Node แล้วเอาออกจาก Heap อีกครั้ง จนเหลือเพียง Node เดียว </br></p>
+    <div class="row mx-0">
+        <img src="./libraryContent/heap/h3.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h4.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <div class="row mt-3 mx-0">
+        <img src="./libraryContent/heap/h5.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h6.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <div class="row mt-3 mx-0">
+        <img src="./libraryContent/heap/h7.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h8.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+
+    <div class="row mt-3 mx-0">
+        <img src="./libraryContent/heap/h9.GIF" class="col-sm-6" style="width:100%;">
+        <img src="./libraryContent/heap/h10.GIF" class="col-sm-6" style="width:100%;">
+    </div>
+    
+    <p class="mt-3">ทำเสร็จแล้วจะได้กลุ่มข้อมูลที่เรียงลำดับกันเรียบร้อย </br></p>
+    <img src="./libraryContent/heap/h11.JPG" style="width:50%;">
+    -->
+</div>

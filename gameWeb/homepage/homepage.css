@@ -1,0 +1,60 @@
+.login-box input:disabled {
+    background-color: #cacfd2;
+}
+
+.login-page {
+    height: 100% !important;
+}
+
+.dark-mode .login-page {
+    background-color: #6c757d; /* secondary color */
+}
+
+.notif-card {
+    max-width: 50%;
+    display: none;
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* MOBILE PHONE AND TABLET PORTRAIT VIEW */
+@media only screen and (max-width: 820px) {
+    .login-sidebar {
+        width: 100%;
+        height: calc(100vh - 2.3rem - 20px); /* content-header height = 2.3rem + 20px*/
+    }
+
+    .cai-playground .card-body {
+        height: calc(100vh - 2.3rem - 20px - 6.75rem - 3.1rem - 3.25rem - 1rem - 4.6rem);
+        overflow-y: auto; 
+        /*6.75 = welcome card height, 3.1rem = cai playground card header height, 
+          3.25rem = cai playground card footer height, 1rem = margin bottom of a card*/
+    }
+
+    .game-menu .card-body {
+        height: calc(100vh - 2.3rem - 20px - 6.75rem - 3.25rem - 1rem);
+    }
+}
+
+/* PC AND LANDSCAPRE VIEW */
+@media only screen and (min-width: 821px) {
+    .login-sidebar {
+        width: 100%;
+        height: calc(100vh - 2.3rem - 20px);
+    }
+
+    .cai-playground:not(.collapsed-card, .collapsing-card), .game-menu:not(.collapsed-card, .collapsing-card) {
+        min-height: 350px;
+    }
+
+    .cai-playground .card-body {
+        height: calc(100vh - 2.3rem - 20px - 6.75rem - 3.1rem - 3.25rem - 1rem);
+        overflow-y: auto;
+    }
+
+    .game-menu .card-body {
+        height: calc(100vh - 2.3rem - 20px - 6.75rem - 0.25rem);
+    }
+
+}
