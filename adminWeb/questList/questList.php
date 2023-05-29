@@ -689,7 +689,7 @@
     <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
         <div class="modal-content bg-dark">
             <div class="modal-header">
-                <h3 class="modal-title">How to use Team Setting page</h3>
+                <h3 class="modal-title">How to use Quest Setting page</h3>
                 <button type="button" class="close" data-dismiss="modal">
                     <i class="fas fa-times"></i>
                 </button>
